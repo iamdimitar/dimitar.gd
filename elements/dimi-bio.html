@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+
+    <link href="../bower_components/polymer/polymer.html" rel="import">
+    <!-- Element Imports -->
+    <link href="../bower_components/iron-flex-layout/iron-flex-layout.html" rel="import">
+    <link href="../bower_components/iron-icons/communication-icons.html" rel="import">
+    <link href="../bower_components/iron-icons/editor-icons.html" rel="import">
+</head>
+
+<dom-module id="dimi-bio">
+  <style is="custom-style">
+    .content{
+      @apply(--layout-horizontal);
+      @apply(--layout-around-justified);
+
+      background-color: #222;
+      padding: 2% 15% 0% 15%; 
+
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+    }
+
+    .bio{
+      @apply(--layout-center);
+      color: #f1f0ee;
+      width: 50%;
+      margin-bottom: 20px;
+    }
+
+    .contact{
+      color: #7799ff;
+      margin-bottom: 20px;
+    }
+
+    .copyright{
+      @apply(--layout-horizontal);
+      @apply(--layout-center-justified);
+
+      background-color: #222;
+      color: gray;
+
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+    }
+
+    iron-icon {
+      color:#f1f0ee;
+    }
+
+    p {
+      margin-top: 0px;
+    }
+
+    a:link {
+      color:#7799ff; 
+      text-decoration:none;
+    }
+    
+    a:visited {
+      color:#7799ff; 
+      text-decoration:none;
+    }
+    a:hover {
+      text-decoration:underline;
+    }
+
+    @media all and (max-width: 640px) {
+      .content{
+        @apply(--layout-vertical);
+
+        padding: 3% 0% 0% 3%;
+      }
+      .bio{
+        width: 100%;
+      }
+    }
+
+
+  </style>
+  <template>
+
+    <div class="content">
+      <div class="bio">
+          My passion is for front-end development and understanding users' frustrations. I have experience with web and iOS applications, computer vision, 3D printing and distributed systems. I understand why and how to build a product from its inception to the maintenance phase. 
+<!--           <br>After working for IBM, I co-founded a Consumer-Facing, Big Data company. In the process, I fell in love with Web-Components and taught myself Swift and iOS to meet our users' preferences. I also learned valuable lessons about business, branding, community engagement and user decisions. We achieved over 50K users and several best startup articles in Austin. -->
+          <br>If you think I can help you with your project or you are looking for someone who can turn coffee into Web-Components, please get in touch.
+      </div>
+
+      <div class="contact">
+        <p><iron-icon icon="communication:contacts"></iron-icon> <a href="https://www.linkedin.com/in/dimitar1" target="_blank">https://www.linkedin.com/in/dimitar1</a></p>
+        <p><iron-icon icon="editor:insert-drive-file"></iron-icon> <a href="/docs/Dimitar_Dimitrov_ résumé_2016.pdf" target="_blank">My résumé in PDF</a></p> 
+        <p><iron-icon icon="communication:mail-outline"></iron-icon> <a href="mailto:iamdimitar@gmail.com">iamdimitar@gmail.com</a></p>
+        <p><iron-icon icon="communication:stay-primary-portrait"></iron-icon> <a href="tel:+0015083691279">508-369-1279</a></p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2016
+    </div>
+
+   </template>
+</dom-module>
+<script>
+  Polymer({
+    is: "dimi-bio",
+    properties: {
+        //...
+        },
+    ready: function(e){
+        //...
+    }
+  });
+</script>
+</html>

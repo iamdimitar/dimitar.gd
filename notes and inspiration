@@ -1,0 +1,16 @@
+Python3 server
+python -m http.server 8000
+
+Prereqs
+npm install -g vulcanize
+
+website inspiration
+layout
+http://www.hihayk.com/
+http://www.dgeorgieff.com/
+
+bio
+http://bobgalmarini.com/
+
+simple & to the point
+http://kimgoulbourne.com/

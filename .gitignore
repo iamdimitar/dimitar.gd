@@ -1,3 +1,13 @@
+# =========================
+# Bower and PS Files
+# =========================
+bower_components/*
+*.psd
+
+# =========================
+# Default Git Ignore Content
+# =========================
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
+
+    <link href="../bower_components/polymer/polymer.html" rel="import">
+    <!-- Element Imports -->
+</head>
+
+<dom-module id="dimi-abovethefold">
+  <style is="custom-style">
+    .background {
+      position: relative;
+      min-height: 100%;
+      width: 100%;
+      overflow: hidden;
+      margin: 0px;
+
+      background: 
+        /* top, transparent red, faked with gradient */ 
+        linear-gradient(
+          rgba(119, 153, 255, 0.88), 
+          rgba(119, 153, 255, 0.88)
+        ),
+      /* bottom, image */
+      url(/images/facesbg.jpg);
+    }
+
+    .intro {
+      margin: 0px;
+      padding: 0px;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-100%,-50%);
+
+    }
+
+    p.heading {
+      font-family: 'Josefin Slab', serif;
+      font-weight: 700;
+      font-size: 100px;
+      text-transform: uppercase;
+      color: #222222;
+      margin-bottom: -80px;
+    }
+
+    p.subtitle {
+      font-family: 'Josefin Slab', serif;
+      font-weight: 400;
+      font-size:  72px;
+      text-transform: uppercase;
+      color: #f1f0ee;
+    }
+
+    span.name {
+      color: #f1f0ee;
+    }
+
+    @media (max-width: 768px) { /*width of iPad or smaller will render "mobile" view */
+      .background {
+        background: 
+          linear-gradient(
+            rgba(119, 153, 255, 0.88), 
+            rgba(119, 153, 255, 0.88)
+          ),
+          url(/images/facesbg@2x.jpg);
+      }
+      .intro{ 
+        /*center*/
+        transform: translate(-50%,-50%);
+        width: 90%;
+      }
+      p.heading {
+        font-size: 50px;
+        margin-bottom: -40px;
+      }
+      p.subtitle {
+        font-size: 37px;
+      }
+    }
+
+  </style>
+  <template>
+
+    <div class="background">
+      <div class="intro">
+        <p class="heading">I'm <span class="name">Dimitar</span>.</p>
+        <p class="subtitle">I code things.</p>
+      </div>
+    </div>  
+
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: "dimi-abovethefold",
+    properties: {
+        //...
+        },
+    ready: function(e){
+        //...
+    }
+  });
+</script>
+</html>
