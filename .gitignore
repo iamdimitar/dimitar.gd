@@ -1,7 +1,9 @@
 # =========================
-# Bower and PS Files
+# Dependency, distribution and PS Files
 # =========================
 bower_components/*
+node_modules/*
+distr/*
 *.psd
 
 # =========================
