@@ -4,6 +4,8 @@ python -m http.server 8000
 Prereqs
 npm install -g vulcanize
 
+vulcanize -o html.vulcanized.html html.html --strip-comments --inline-scripts --inline-css
+
 website inspiration
 layout
 http://www.hihayk.com/
