@@ -8,7 +8,7 @@ var htmlmin = require('gulp-htmlmin');
 //variables
 var distributionFolder = 'distr';
 
-// create a default task and just log a message
+// Test message
 gulp.task('message', function() {
   return gutil.log('Gulp is running!');
 });
@@ -26,7 +26,8 @@ gulp.task('vulcanize', function () {
   			stripComments: true
 		}))
 		.pipe(htmlmin({collapseWhitespace: true}))
-		.pipe(gulp.dest(distributionFolder));
+		.pipe(gulp.dest(distributionFolder))
+        .pipe(gulp.dest(distributionFolder)).on('error', gutil.log)
 });
 
 //Copy distribution files
@@ -38,4 +39,13 @@ gulp.task('copyFiles', function() {
 });
 
 // Default Task
-gulp.task('default', ['message', 'vulcanize', 'copyFiles']);
+gulp.task('default', ['message', 'copyFiles', 'vulcanize']);
+
+//Watch Task
+gulp.watch('elements/*.html', ['changeMessageElements', 'default']);
+
+//Message notifying us of change in elements
+gulp.task('changeMessageElements', function() {
+  return gutil.log('An element changed.');
+});
+
