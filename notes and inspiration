@@ -13,6 +13,9 @@ vulcanize -o html.vulcanized.html html.html --strip-comments --inline-scripts --
 
 
 website inspiration
+timeline
+https://moz.com/about
+
 layout
 http://www.hihayk.com/
 http://www.dgeorgieff.com/
